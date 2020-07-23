@@ -45,7 +45,7 @@ Header: Content-Type: application/json
 ```
 http://localhost/gradiweb/public/api/crear-cliente
 {
-  "token": "lTyo7mDJvLaFIkBm5jPiGYrqKmMXjVRF8vMP8E1ceKBQ9hp7svxdJgRJqDAI",
+  "token":"XXX",
   "cliente": {
             "nombre": "Luis Ávila",
             "documento": 652135478,
