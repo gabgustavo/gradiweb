@@ -107,7 +107,7 @@ class ClienteController extends Controller
     public function update(Request $request, Cliente $cliente)
     {
       $cliente->fill($request->all())->save();
-      foreach ($request->placa as $k => $val) {
+      foreach ($request->placa as $k => $val) {//todo
         $vehiculo = new Vehiculo;
         $vehiculo->placa = $val;
         $vehiculo->marca_id = $request->marca_id[$k];

@@ -223,5 +223,83 @@ function feches(selector, formato)
 }
 
 
+function demostracion(arr)
+{
+  var superdata = [];
+
+  arr.forEach(function (val) {
+    if(superdata[val[0]] === undefined) {
+      var valores = new Array();
+      valores[val[1]] = parseInt(val[3]);
+      valores = {...valores};
+      superdata[val[0]] = valores;
+
+    } else {
+      if(superdata[val[0]][val[1]]) {
+        //TODO
+        if(superdata[val[0]].AM == undefined) {
+          var valores = new Array();
+          valores[indexAnterior] = valorAnterior;
+          valores['PM'] = parseInt(val[3]) + superdata[val[0]][val[1]];;
+          valores = {...valores};
+
+          superdata[val[0]] = valores;
+        } else {
+          var valores = new Array();
+          valores[indexAnterior] = valorAnterior;
+          valores['AM'] = parseInt(val[3]) + superdata[val[0]][val[1]];;
+          valores = {...valores};
+
+          superdata[val[0]] = valores;
+        }
+
+        superdata[val[0]] = valores;
+      } else {
+        var indexAnterior = (superdata[val[0]].AM == undefined) ? 'PM' : 'AM';
+        var valorAnterior = (superdata[val[0]].AM == undefined) ? superdata[val[0]].PM : superdata[val[0]].AM;
+
+        var valores = new Array();
+        valores[indexAnterior] = valorAnterior;
+        valores[val[1]] = parseInt(val[3]);
+        valores = {...valores};
+        superdata[val[0]] = valores;
+      }
+    }
+  });
+  //console.log({...superdata})
+  var info = {...superdata};
+  return JSON.stringify(info);
+  //return JSON.stringify(superdata);
+}
+
+
+/*function demostracion(arr)
+ {
+ var superdata = new Array();
+
+ arr.forEach(function (val) {
+ if(superdata[val[0]] === undefined) {
+ var valores = new Array();
+ valores[val[1]] = parseInt(val[3]);
+ superdata[val[0]] = valores;
+ } else {
+ if(superdata[val[0]][val[1]]) {
+ var valores = new Array();
+ valores[val[1]] = parseInt(val[3]) + superdata[val[0]][val[1]];
+ superdata[val[0]].push(valores);
+ } else {
+ var valores = new Array();
+ valores[val[1]] = parseInt(val[3]);
+ /*var valorAnterior = (superdata[val[0]].AM === undefined) ? superdata[val[0]].PM : superdata[val[0]].AM;
+ var keyAnterior = (superdata[val[0]].AM === undefined) ? 'PM' : 'AM';*/
+/* valores[keyAnterior] = valorAnterior;*/
+/*superdata[val[0]] = valores;
+//superdata[val[0]].push(valores);
+}
+}
+});
+//console.log({...superdata})
+//return JSON.stringify(superdata);
+}*/
 
 

@@ -22,3 +22,4 @@ Route::get('cliente/{documento}', 'ApiController@show')->name('cli.show');
 Route::get('marcas', 'ApiController@getMarcas')->name('cli.marcas');
 Route::get('tipo-vehiculos', 'ApiController@getTipos')->name('cli.tipo');
 Route::get('tipos-documento', 'ApiController@getTiposDocumento')->name('cli.tipo.documento');
+Route::get('vehiculos', 'ApiController@getVehiculos')->name('cli.vehiculos');
