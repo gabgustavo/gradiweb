@@ -50,6 +50,8 @@ http://localhost/gradiweb/public/api/crear-cliente
             "nombre": "Luis Ávila",
             "documento": 652135478,
             "tipo_documento": "C.C"//cod del tipo de documento tambien
+            "telefono":""//opcional
+            "email":""//opcional
         },"vehiculo": [
             {
                 "placa": "LKJ123",
