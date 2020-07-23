@@ -17,6 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('cli-get-token', 'ApiController@getToken')->name('cli.token');
 Route::post('crear-cliente', 'ApiController@store')->name('cli.store');
 Route::get('cliente/{documento}', 'ApiController@show')->name('cli.show');
 Route::get('marcas', 'ApiController@getMarcas')->name('cli.marcas');

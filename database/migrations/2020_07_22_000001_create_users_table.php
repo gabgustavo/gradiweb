@@ -21,18 +21,19 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create($this->tableName, function (Blueprint $table) {
-            $table->engine = 'InnoDB';
-            $table->increments('id');
-            $table->string('nombres', 100)->nullable();
-            $table->string('email', 80)->nullable();
-            $table->string('user', 45)->nullable();
-            $table->string('url', 45)->nullable();
-            $table->string('password', 80)->nullable();
-            $table->string('foto')->nullable();
-            $table->string('telefono', 30)->nullable();
-            $table->string('remember_token')->nullable();
-            $table->enum('estado', ['activo', 'inactivo'])->nullable();
-            $table->nullableTimestamps();
+          $table->engine = 'InnoDB';
+          $table->increments('id');
+          $table->string('nombres', 100)->nullable();
+          $table->string('email', 80)->nullable();
+          $table->string('user', 45)->nullable();
+          $table->string('url', 45)->nullable();
+          $table->string('password', 80)->nullable();
+          $table->string('foto')->nullable();
+          $table->string('telefono', 30)->nullable();
+          $table->string('token', 250)->nullable();
+          $table->string('remember_token')->nullable();
+          $table->enum('estado', ['activo', 'inactivo'])->nullable();
+          $table->nullableTimestamps();
         });
     }
 

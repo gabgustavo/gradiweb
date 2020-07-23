@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-07-2020 a las 02:16:08
+-- Tiempo de generación: 23-07-2020 a las 20:27:28
 -- Versión del servidor: 5.7.19
 -- Versión de PHP: 7.1.12
 
@@ -35,15 +35,15 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `email` varchar(80) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `clientes`
 --
 
 INSERT INTO `clientes` (`id`, `nombres`, `tipo_documento_id`, `documento`, `telefono`, `email`, `created_at`, `updated_at`) VALUES
-(1, 'Gustavo', 5, 1234567, '3023322989', 'gustavoavilabar@gmail.com', '2020-07-22 05:00:00', '2020-07-22 05:00:00'),
-(6, 'fgggdg', 5, 4555, '54454', NULL, '2020-07-23 04:43:55', '2020-07-23 04:43:55');
+(1, 'Luis Avila', 5, 1234567, '3023322989', 'gustavoavilabar@gmail.com', '2020-07-22 05:00:00', '2020-07-23 07:19:49'),
+(15, 'Gustavo Jimenez', 5, 6547885, NULL, NULL, '2020-07-23 18:13:18', '2020-07-23 18:13:18');
 
 -- --------------------------------------------------------
 
@@ -61,8 +61,8 @@ CREATE TABLE IF NOT EXISTS `clientes_vehiculos` (
 --
 
 INSERT INTO `clientes_vehiculos` (`cliente_id`, `vehiculo_id`) VALUES
-(6, 13),
-(1, 14);
+(1, 1),
+(15, 19);
 
 -- --------------------------------------------------------
 
@@ -207,6 +207,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(80) DEFAULT NULL,
   `foto` varchar(255) DEFAULT NULL,
   `telefono` varchar(30) DEFAULT NULL,
+  `token` varchar(250) DEFAULT NULL,
   `remember_token` varchar(255) DEFAULT NULL,
   `estado` enum('activo','inactivo') DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -217,8 +218,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `nombres`, `email`, `user`, `url`, `password`, `foto`, `telefono`, `remember_token`, `estado`, `created_at`, `updated_at`) VALUES
-(1, 'Luis Ávila B.', 'gustavoavilabar@gmail.com', 'luis', 'luis', '$2y$10$NGUKfuIsNUL0N0/eu.CcZ.sCWlQMC.GzXc2dmLZsctIO/nqVdcQI2', 'luis_lg_aZdNQC420200722010419.png', '3023322989', 'lTyo7mDJvLaFIkBm5jPiGYrqKmMXjVRF8vMP8E1ceKBQ9hp7svxdJgRJqDAI', 'activo', '2020-07-21 05:00:00', '2020-07-22 06:07:00');
+INSERT INTO `users` (`id`, `nombres`, `email`, `user`, `url`, `password`, `foto`, `telefono`, `token`, `remember_token`, `estado`, `created_at`, `updated_at`) VALUES
+(1, 'Luis Ávila B.', 'gustavoavilabar@gmail.com', 'luis', 'luis', '$2y$10$NGUKfuIsNUL0N0/eu.CcZ.sCWlQMC.GzXc2dmLZsctIO/nqVdcQI2', 'luis_lg_aZdNQC420200722010419.png', '3023322989', 'lTyo7mDJvLaFIkBm5jPiGYrqKmMXjVRF8vMP8E1ceKBQ9hp7svxdJgRJqDAI', 'lTyo7mDJvLaFIkBm5jPiGYrqKmMXjVRF8vMP8E1ceKBQ9hp7svxdJgRJqDAI', 'activo', '2020-07-21 05:00:00', '2020-07-22 06:07:00');
 
 -- --------------------------------------------------------
 
@@ -233,7 +234,7 @@ CREATE TABLE IF NOT EXISTS `vehiculos` (
   `tipo_id` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `vehiculos`
@@ -241,12 +242,7 @@ CREATE TABLE IF NOT EXISTS `vehiculos` (
 
 INSERT INTO `vehiculos` (`id`, `placa`, `marca_id`, `tipo_id`, `created_at`, `updated_at`) VALUES
 (1, 'ABH123', 1, 1, '2020-07-22 05:00:00', '2020-07-22 05:00:00'),
-(2, 'GDS321', 2, 2, '2020-07-22 05:00:00', '2020-07-22 05:00:00'),
-(10, 'HDG123', 1, 1, '2020-07-23 04:43:55', '2020-07-23 04:43:55'),
-(11, 'HDG123', 1, 1, '2020-07-23 05:56:48', '2020-07-23 05:56:48'),
-(12, 'HDG123', 2, 1, '2020-07-23 05:56:56', '2020-07-23 05:56:56'),
-(13, 'HDG123', 2, 2, '2020-07-23 05:57:02', '2020-07-23 05:57:02'),
-(14, 'ABH123', 1, 1, '2020-07-23 06:20:05', '2020-07-23 06:20:05');
+(19, 'LKJ123', 1, 1, '2020-07-23 18:13:18', '2020-07-23 18:13:18');
 
 --
 -- Índices para tablas volcadas
@@ -320,7 +316,7 @@ ALTER TABLE `vehiculos`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT de la tabla `email_settings`
 --
@@ -355,7 +351,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT de la tabla `vehiculos`
 --
 ALTER TABLE `vehiculos`
-MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 --
 -- Restricciones para tablas volcadas
 --

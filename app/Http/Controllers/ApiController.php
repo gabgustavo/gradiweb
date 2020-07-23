@@ -7,17 +7,44 @@ use App\Models\Marca;
 use App\Models\Tipo;
 use App\Models\TipoDocumento;
 use App\Models\Vehiculo;
+use App\User;
 use Illuminate\Http\Request;
 use DB;
+use Auth;
 
 class ApiController extends Controller
 {
+  /*
+   * TODO Falta en todos corroborar el token que sea valido
+   * */
+  public function getToken(Request $request)
+  {
+    if($request->isJson() && $request->hasHeader('Content-Type')) {
+      if($request->usuario && $request->contrasena) {
+        $pass = bcrypt($request->contrasena);
+        $data =[
+          'user' => $request->usuario,
+          'password' => $request->contrasena,
+          'estado'=>'activo'
+        ];
+        if(Auth::attempt($data)) {
+          $user = auth()->user();
+          return response()->json(['token' => $user->token, 'msg' => '', 'status' => 200], 200);
+        }
+      }
+      return response()->json(['token' => null, 'msg' =>
+        'Validar información', 'status' => 203], 203);
+    }
+
+    return response()->json(['token' => null, 'msg'
+    => 'Validar información', 'status' => 203], 203);
+  }
    public function store(Request $request)
    {
      $data = [];
      $data['status'] = 406;
 
-     if($request->isJson() && $request->hasHeader('Content-Type')) {
+     if($request->isJson() && $request->hasHeader('Content-Type') && $request->token) {
        DB::beginTransaction();
 
        try {
@@ -79,30 +106,52 @@ class ApiController extends Controller
 
    public function show(Request $request, $documento)
    {
-     $cliente = Cliente::getCliente($documento);
+     $cliente = [];
+     $cliente['status'] = 403;
 
+     if($request->token) {
+       $cliente = Cliente::getCliente($documento);
+     }
      return response()->json(['cliente' => $cliente], $cliente['status']);
    }
 
-   public  function getMarcas()
+   public  function getMarcas(Request $request)
    {
-     $marcas = Marca::select('id as cod', 'marca')->get();
-     return response()->json(['marcas' => $marcas]);
+     $marcas = [];
+     $marcas['status'] = 403;
+     if($request->token) {
+       $marcas = Marca::select('id as cod', 'marca')->get();
+       $marcas['status'] = 200;
+     }
+
+     return response()->json(['marcas' => $marcas],$marcas['status']);
    }
-  public  function getTipos()
+  public  function getTipos(Request $request)
   {
-    $tipos = Tipo::select('id as cod', 'tipo')->get();
-    return response()->json(['tipos_vehiculos' => $tipos]);
+    $tipos = [];
+    $tipos['status'] = 403;
+    if($request->token) {
+      $tipos = Tipo::select('id as cod', 'tipo')->get();
+      $tipos['status'] = 200;
+    }
+    return response()->json(['tipos_vehiculos' => $tipos], $tipos['status']);
   }
-  public  function getTiposDocumento()
+  public  function getTiposDocumento(Request $request)
   {
-    $tipos = TipoDocumento::select('id as cod', 'tipo_documento as tipo')->get();
-    return response()->json(['tipos_documento' => $tipos]);
+    $tipos = [];
+    $tipos['status'] = 403;
+    dd($request->all());
+    if($request->token) {
+      $tipos = TipoDocumento::select('id as cod', 'tipo_documento as tipo')->get();
+      $tipos['status'] = 200;
+    }
+    return response()->json(['tipos_documento' => $tipos], $tipos['status']);
   }
 
   public function getVehiculos(Request $request)
   {
-    if($request->isJson() && $request->hasHeader('Content-Type')) {
+    $status = $request->token ? 203 : 403;
+    if($request->isJson() && $request->hasHeader('Content-Type') && $request->token) {
       $marcas = Marca::orderBy('marca')->get();
       $data = [];
       foreach ($marcas as $marca) {
@@ -122,6 +171,6 @@ class ApiController extends Controller
       return response()->json(['vehiculos' => $data, 'msg' => '', 'status' => 200], 200);
     }
 
-    return response()->json(['vehiculos' => null, 'msg' => 'Petición no valida', 'status' => 203], 203);
+    return response()->json(['vehiculos' => null, 'msg' => 'Petición no valida', 'status' => $status], $status);
   }
 }
