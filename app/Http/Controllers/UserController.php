@@ -74,6 +74,7 @@ class UserController extends Controller
   {
     $user = User::create($request->all());
     $user->password = bcrypt($request->password);
+    $user->token = str_random(150);
     $user->save();
 
     if($request->foto) {

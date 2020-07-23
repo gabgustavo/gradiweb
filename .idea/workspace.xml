@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4efde2e-b3f9-44c1-84c7-8bcf258b68fb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,114 +14,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="74" column="2" lean-forward="false" selection-start-line="74" selection-start-column="2" selection-end-line="74" selection-end-column="2" />
+            <state relative-caret-position="371">
+              <caret line="76" column="34" lean-forward="false" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="20" column="49" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="46" column="84" lean-forward="false" selection-start-line="46" selection-start-column="79" selection-end-line="46" selection-end-column="84" />
-              <folding>
-                <element signature="e#40#63#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="642">
-                <caret line="70" column="58" lean-forward="true" selection-start-line="70" selection-start-column="58" selection-end-line="70" selection-end-column="58" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConsumoApiController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConsumoApiController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="192" column="34" lean-forward="false" selection-start-line="192" selection-start-column="23" selection-end-line="192" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/themes/adminlte/js/scripts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="256" column="14" lean-forward="false" selection-start-line="256" selection-start-column="14" selection-end-line="256" selection-end-column="14" />
-              <folding>
-                <marker date="1595530890791" expanded="true" signature="89:5022" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="201:1069" ph="{&quot;sProcessing&quot;: &quot;Procesando...&quot;...}" />
-                <marker date="1595530890791" expanded="true" signature="760:877" ph="{&quot;sFirst&quot;: &quot;Primero&quot;...}" />
-                <marker date="1595530890791" expanded="true" signature="892:1064" ph="{&quot;sSortAscending&quot;: &quot;: Activar para ordenar la columna de manera ascendente&quot;...}" />
-                <marker date="1595530890791" expanded="true" signature="1095:2038" ph="{&quot;today&quot;: 'Hoy'...}" />
-                <marker date="1595530890791" expanded="true" signature="1917:2034" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="2123:3396" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="2354:2692" ph="{&quot;title&quot;: '¿Esta seguro de que desea eliminar este registro?'...}" />
-                <marker date="1595530890791" expanded="true" signature="2722:3389" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="2750:3381" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="2785:3311" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="2806:2907" ph="{&quot;url&quot;: link...}" />
-                <marker date="1595530890791" expanded="true" signature="2945:3171" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="2983:3089" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="3095:3155" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="3210:3298" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="3317:3371" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="3480:3933" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="3516:3927" ph="{&quot;language&quot;: configTable...}" />
-                <marker date="1595530890791" expanded="true" signature="3635:3694" ph="{&quot;url&quot;: usuariosAjaxUri...}" />
-                <marker date="1595530890791" expanded="true" signature="3713:3890" ph="[...]" />
-                <marker date="1595530890791" expanded="true" signature="3936:3980" ph="//..." />
-                <marker date="1595530890791" expanded="true" signature="4011:4527" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="4044:4521" ph="{&quot;language&quot;: configTable...}" />
-                <marker date="1595530890791" expanded="true" signature="4163:4219" ph="{&quot;url&quot;: emailAjaxUri...}" />
-                <marker date="1595530890791" expanded="true" signature="4238:4484" ph="[...]" />
-                <marker date="1595530890791" expanded="true" signature="4625:4983" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="4666:4977" ph="{&quot;language&quot;: configTable...}" />
-                <marker date="1595530890791" expanded="true" signature="4785:4848" ph="{&quot;url&quot;: tpdocumentosAjaxUri...}" />
-                <marker date="1595530890791" expanded="true" signature="4867:4940" ph="[...]" />
-                <marker date="1595530890791" expanded="true" signature="5074:5993" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="5177:5989" ph="{&quot;language&quot;: 'es'...}" />
-                <marker date="1595530890791" expanded="true" signature="5501:5963" ph="{&quot;format&quot;: formato...}" />
-                <marker date="1595530890791" expanded="true" signature="5606:5718" ph="[...]" />
-                <marker date="1595530890791" expanded="true" signature="5740:5928" ph="[...]" />
-                <marker date="1595530890791" expanded="true" signature="6023:7462" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="6077:7328" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="6119:6267" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="6273:7324" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="6311:6916" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="6374:6619" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="6625:6870" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="6922:7318" ph="{...}" />
-                <marker date="1595530890791" expanded="true" signature="7465:8116" ph="/*...*/" />
-                <marker date="1595530890791" expanded="true" signature="8117:8159" ph="/*...*/" />
-                <marker date="1595530890791" expanded="true" signature="8160:8303" ph="/*...*/" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -188,7 +83,6 @@
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/partials/form.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/UserEditRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/UserCreateRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" />
@@ -222,6 +116,7 @@
         <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
       </list>
     </option>
   </component>
@@ -473,12 +368,12 @@
       <updated>1595365829592</updated>
       <workItem from="1595365831346" duration="11689000" />
       <workItem from="1595417940084" duration="40510000" />
-      <workItem from="1595504977298" duration="31684000" />
+      <workItem from="1595504977298" duration="32355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83883000" />
+    <option name="totallyTimeSpent" value="84554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -895,22 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2311">
-          <caret line="141" column="19" lean-forward="false" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="74" column="2" lean-forward="false" selection-start-line="74" selection-start-column="2" selection-end-line="74" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConsumoApiController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
@@ -919,11 +798,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="20" column="49" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="49" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="642">
+            <caret line="70" column="58" lean-forward="true" selection-start-line="70" selection-start-column="58" selection-end-line="70" selection-end-column="58" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -937,14 +819,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="642">
-            <caret line="70" column="58" lean-forward="true" selection-start-line="70" selection-start-column="58" selection-end-line="70" selection-end-column="58" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="20" column="49" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="74" column="2" lean-forward="false" selection-start-line="74" selection-start-column="2" selection-end-line="74" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="76" column="34" lean-forward="false" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
