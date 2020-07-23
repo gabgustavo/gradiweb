@@ -62,3 +62,10 @@ http://localhost/gradiweb/public/api/crear-cliente
 }
 Header: Content-Type: application/json
 ```
+
+### url
+* http://localhost/gradiweb/public/admin/get-token
+* http://localhost/gradiweb/public/admin/get-vehiculos
+* http://localhost/gradiweb/public/admin/get-tipos-documento
+* http://localhost/gradiweb/public/admin/get-marcas
+* http://localhost/gradiweb/public/admin/set-cliente-vehiculo

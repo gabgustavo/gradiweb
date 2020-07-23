@@ -66,4 +66,12 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function (){
   Route::post('/clientes/editar/{cliente}', 'ClienteController@update')->name('cliente.update');
   Route::post('/clientes/eliminar/{cliente}', 'ClienteController@destroy')->name('cliente.destroy');
   //</lientes>
+
+  //<consumo de api>
+  Route::get('/get-token', 'ConsumoApiController@getToken')->name('get.token');
+  Route::get('/get-vehiculos', 'ConsumoApiController@getVehiculos')->name('get.vehiculos');
+  Route::get('/get-tipos-documento', 'ConsumoApiController@getTiposDocumento')->name('get.tpdocumentos');
+  Route::get('/get-marcas', 'ConsumoApiController@getMarcas')->name('get.marcas');
+  Route::get('/set-cliente-vehiculo', 'ConsumoApiController@setClienteVehiculo')->name('set.cli.vehiculo');
+  //</consumo de api>
 });

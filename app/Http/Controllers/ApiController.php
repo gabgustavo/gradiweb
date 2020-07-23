@@ -140,7 +140,6 @@ class ApiController extends Controller
   {
     $tipos = [];
     $tipos['status'] = 403;
-    dd($request->all());
     if($request->token) {
       $tipos = TipoDocumento::select('id as cod', 'tipo_documento as tipo')->get();
       $tipos['status'] = 200;
