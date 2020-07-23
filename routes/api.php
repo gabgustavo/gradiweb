@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('crear-cliente', 'ApiController@store')->name('cli.store');
+Route::get('cliente/{documento}', 'ApiController@show')->name('cli.show');
+Route::get('marcas', 'ApiController@getMarcas')->name('cli.marcas');
+Route::get('tipo-vehiculos', 'ApiController@getTipos')->name('cli.tipo');
+Route::get('tipos-documento', 'ApiController@getTiposDocumento')->name('cli.tipo.documento');

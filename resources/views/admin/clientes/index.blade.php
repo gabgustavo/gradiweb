@@ -3,7 +3,7 @@
 @section('content')
   <a href="{{ route('cliente.create') }}" class="btn btn-primary float-right mb-3">Nuevo</a>
   {{----}}
-  <form method="get" action="" class="mt-5 mb-3">
+  <form method="get" action="" class="mt-5 mb-3" autocomplete="off">
     <div class="form-row align-items-center">
       <div class="col-11 my-1">
         <label class="sr-only" for="busqueda">Busqueda</label>

@@ -8,6 +8,7 @@ class Cliente extends Model
 {
     protected $guarded = ['id'];
     protected $fillable = ['nombres', 'tipo_documento_id', 'documento', 'telefono', 'email'];
+    protected $hidden = ['id', 'created_at', 'updated_at', 'cliente_id'];
 
   public function tipoDocumento()
   {
